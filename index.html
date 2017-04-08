@@ -310,7 +310,7 @@
 
       
         
-          <p>　　关于apply()和call()方法，老生常谈。关于他们的使用和区别网上一搜一大堆，但是结果稂莠不齐，果然得靠自己动手。<br>　　apply()和call()方法是每个函数都包含的两个非继承而来的方法。这个两个方法的用途都是<strong>在特定的作用域中调用函数，实际上等于设置函数体内this对象的值</strong>。<br></p>
+          <p>　　关于apply()和call()方法，老生常谈。他们的使用和区别网上一搜一大堆，但是结果稂莠不齐，果然还得靠自己动手。<br>　　apply()和call()方法是每个函数都包含的两个非继承而来的方法。这个两个方法的用途都是<strong>在特定的作用域中调用函数，实际上等于设置函数体内this对象的值</strong>。<br></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2017/04/08/howToUseApplyCallBind/#more" rel="contents">
               阅读全文 &raquo;
@@ -425,9 +425,9 @@
 
       
         
-          <p>　　总结下js中数组和字符串的常用方法。有几个方法总是记混，没办法，英语差，而且对于返回值和是否改变原数组也一直掌握不牢。</p>
-<h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><h4 id="array-concat-item…"><a href="#array-concat-item…" class="headerlink" title="array.concat(item…)"></a>array.concat(item…)</h4><p>concant方法产生一个新数组，它包含一份array的浅复制(shallow copy)并把一个或多个参数item附加在其后。如果item是一个数组，那么它的每个元素会被分别添加。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];</span><br><span class="line">var b = [&apos;x&apos;,&apos;y&apos;,&apos;z&apos;];</span><br><span class="line">var c = a.concat(b, true);</span><br><span class="line">//c 变成 [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;x&apos;,&apos;y&apos;,&apos;z&apos;,true]</span><br><span class="line">//数组a 和 b不变</span><br></pre></td></tr></table></figure>
+          <p>&#x3000;&#x3000;&#x603B;&#x7ED3;&#x4E0B;js&#x4E2D;&#x6570;&#x7EC4;&#x548C;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5E38;&#x7528;&#x65B9;&#x6CD5;&#x3002;&#x6709;&#x51E0;&#x4E2A;&#x65B9;&#x6CD5;&#x603B;&#x662F;&#x8BB0;&#x6DF7;&#xFF0C;&#x6CA1;&#x529E;&#x6CD5;&#xFF0C;&#x82F1;&#x8BED;&#x5DEE;&#xFF0C;&#x800C;&#x4E14;&#x5BF9;&#x4E8E;&#x8FD4;&#x56DE;&#x503C;&#x548C;&#x662F;&#x5426;&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;&#x4E5F;&#x4E00;&#x76F4;&#x638C;&#x63E1;&#x4E0D;&#x7262;&#x3002;</p>
+<h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><h4 id="array-concat-item&#x2026;"><a href="#array-concat-item&#x2026;" class="headerlink" title="array.concat(item&#x2026;)"></a>array.concat(item&#x2026;)</h4><p>concant&#x65B9;&#x6CD5;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x65B0;&#x6570;&#x7EC4;&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x4E00;&#x4EFD;array&#x7684;&#x6D45;&#x590D;&#x5236;(shallow copy)&#x5E76;&#x628A;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x53C2;&#x6570;item&#x9644;&#x52A0;&#x5728;&#x5176;&#x540E;&#x3002;&#x5982;&#x679C;item&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x4F1A;&#x88AB;&#x5206;&#x522B;&#x6DFB;&#x52A0;&#x3002;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];</span><br><span class="line">var b = [&apos;x&apos;,&apos;y&apos;,&apos;z&apos;];</span><br><span class="line">var c = a.concat(b, true);</span><br><span class="line">//c &#x53D8;&#x6210; [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;x&apos;,&apos;y&apos;,&apos;z&apos;,true]</span><br><span class="line">//&#x6570;&#x7EC4;a &#x548C; b&#x4E0D;&#x53D8;</span><br></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/09/10/数组和字符串对象方法总结/#more" rel="contents">
               阅读全文 &raquo;
@@ -543,7 +543,7 @@
       
         
           
-            <h1 id="测试，看看能不能放文章"><a href="#测试，看看能不能放文章" class="headerlink" title="测试，看看能不能放文章"></a>测试，看看能不能放文章</h1><h2 id="所以说markdown是啥？"><a href="#所以说markdown是啥？" class="headerlink" title="所以说markdown是啥？"></a>所以说markdown是啥？</h2>
+            <h1 id="&#x6D4B;&#x8BD5;&#xFF0C;&#x770B;&#x770B;&#x80FD;&#x4E0D;&#x80FD;&#x653E;&#x6587;&#x7AE0;"><a href="#&#x6D4B;&#x8BD5;&#xFF0C;&#x770B;&#x770B;&#x80FD;&#x4E0D;&#x80FD;&#x653E;&#x6587;&#x7AE0;" class="headerlink" title="&#x6D4B;&#x8BD5;&#xFF0C;&#x770B;&#x770B;&#x80FD;&#x4E0D;&#x80FD;&#x653E;&#x6587;&#x7AE0;"></a>&#x6D4B;&#x8BD5;&#xFF0C;&#x770B;&#x770B;&#x80FD;&#x4E0D;&#x80FD;&#x653E;&#x6587;&#x7AE0;</h1><h2 id="&#x6240;&#x4EE5;&#x8BF4;markdown&#x662F;&#x5565;&#xFF1F;"><a href="#&#x6240;&#x4EE5;&#x8BF4;markdown&#x662F;&#x5565;&#xFF1F;" class="headerlink" title="&#x6240;&#x4EE5;&#x8BF4;markdown&#x662F;&#x5565;&#xFF1F;"></a>&#x6240;&#x4EE5;&#x8BF4;markdown&#x662F;&#x5565;&#xFF1F;</h2>
           
         
       
